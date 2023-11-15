@@ -1,5 +1,6 @@
 # This is Git's per-user configuration file.
-[includeIf "gitdir:~/personal/"]
-    path = ~/.gitconfig.personal
-[includeIf "gitdir:~/work/"]
-    path = ~/.gitconfig.work
+[user]
+    name = indirection42
+    email = jiyuanz95@gmail.com
+# [includeIf "gitdir:~/work/"]
+#     path = ~/.gitconfig.work

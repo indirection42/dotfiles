@@ -34,9 +34,6 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 VI_MODE_SET_CURSOR=true
-#export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.ustc.edu.cn/brew.git"
-#export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.ustc.edu.cn/homebrew-core.git"
-#export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.ustc.edu.cn/homebrew-bottles"
 #alias vim="nvim"
 export VIMCONFIG=~/.config/nvim
 export VIMDATA=~/.local/share/nvim
@@ -48,25 +45,25 @@ export GOPATH=$HOME/go
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/jiyuanz/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/{{- .chezmoi.username -}}/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/jiyuanz/mambaforge/etc/profile.d/conda.sh" ]; then
-        . "/Users/jiyuanz/mambaforge/etc/profile.d/conda.sh"
+    if [ -f "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/jiyuanz/mambaforge/bin:$PATH"
+        export PATH="/Users/{{- .chezmoi.username -}}/mambaforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
 
-if [ -f "/Users/jiyuanz/mambaforge/etc/profile.d/mamba.sh" ]; then
-    . "/Users/jiyuanz/mambaforge/etc/profile.d/mamba.sh"
+if [ -f "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
 
 
-[ -f "/Users/jiyuanz/.ghcup/env" ] && source "/Users/jiyuanz/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 
 . "$HOME/.cargo/env" # cargo-env

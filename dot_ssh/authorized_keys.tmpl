@@ -1,0 +1,5 @@
+{{ if ne .chezmoi.os "darwin" -}}
+    {{ range gitHubKeys "indirection42" -}}
+    {{   .Key }}
+    {{ end -}}
+{{ end -}}
