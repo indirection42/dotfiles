@@ -1,0 +1,60 @@
+# Homebrew settings
+export HOMEBREW_PREFIX="/opt/homebrew"; 
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
+export HOMEBREW_REPOSITORY="/opt/homebrew";
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
+export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
+export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
+#export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+VI_MODE_SET_CURSOR=true
+#alias vim="nvim"
+#export VIMCONFIG=~/.config/nvim
+#export VIMDATA=~/.local/share/nvim
+export EDITOR=vim
+
+# Python settings
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/{{- .chezmoi.username -}}/mambaforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/conda.sh" ]; then
+        . "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/{{- .chezmoi.username -}}/mambaforge/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+if [ -f "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/mamba.sh" ]; then
+    . "/Users/{{- .chezmoi.username -}}/mambaforge/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+
+# Haskell settings
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+# Rust settings
+. "$HOME/.cargo/env" # cargo-env
+
+# NodeJs settings
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Golang - managed by goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+## enable shims, managedment of `GOPATH` and `GOROOT` and auto-completion
+eval "$(goenv init -)"
+export PATH="$GOROOT/bin:$PATH"
+### keep $GOPATH/bin at the end for safety(see also https://github.com/go-nv/goenv/issues/99"
+export PATH="$PATH:$GOPATH/bin"
+
+# Solana cli
+export PATH="/Users/indirection42/.local/share/solana/install/active_release/bin:$PATH"
