@@ -56,5 +56,8 @@ export PATH="$GOROOT/bin:$PATH"
 ### keep $GOPATH/bin at the end for safety(see also https://github.com/go-nv/goenv/issues/99"
 export PATH="$PATH:$GOPATH/bin"
 
+# Python - managed by Rye
+source "$HOME/.rye/env" 
+
 # Solana cli
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
