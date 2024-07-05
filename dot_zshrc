@@ -35,6 +35,7 @@ plugins=(
   z
   zsh-syntax-highlighting
   colored-man-pages
+  poetry
 )
 
 source $ZSH/oh-my-zsh.sh

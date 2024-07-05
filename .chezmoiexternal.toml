@@ -28,7 +28,7 @@
     clone.args = ["--depth=1"]
 [".goenv"]
     type = "git-repo"
-    url = "https://github.com/go-nv/goenv.git ~/.goenv"
+    url = "https://github.com/go-nv/goenv.git"
     refreshPeriod = "168h"
     pull.args = ["--ff-only"]
     clone.args = ["--depth=1"]
