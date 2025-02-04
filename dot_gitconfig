@@ -4,3 +4,5 @@
     email = jiyuanz95@gmail.com
 # [includeIf "gitdir:~/work/"]
 #     path = ~/.gitconfig.work
+[push]
+    autoSetupRemote = true

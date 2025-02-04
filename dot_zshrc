@@ -35,7 +35,6 @@ plugins=(
   z
   zsh-syntax-highlighting
   colored-man-pages
-  poetry
   rust
   bun
   macos
