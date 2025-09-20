@@ -1,8 +1,24 @@
 # This is Git's per-user configuration file.
-[user]
-    name = indirection42
-    email = jiyuanz95@gmail.com
-# [includeIf "gitdir:~/work/"]
-#     path = ~/.gitconfig.work
+# Global settings that apply everywhere
 [push]
     autoSetupRemote = true
+[submodule]
+    recurse = true
+
+# Conditional includes based on directory structure
+# Personal projects (assumes they're in ~/personal/ or ~/dev/personal/)
+[includeIf "gitdir:~/personal/"]
+    path = ~/.gitconfig-personal
+[includeIf "gitdir:~/dev/personal/"]
+    path = ~/.gitconfig-personal
+
+# Professional projects (assumes they're in ~/work/ or ~/dev/work/)
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig-work
+[includeIf "gitdir:~/dev/work/"]
+    path = ~/.gitconfig-work
+
+# Default configuration (fallback)
+[user]
+    name = indirection42
+    email = indirection42@outlook.com
