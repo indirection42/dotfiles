@@ -80,6 +80,7 @@
                         "vendor_id": 9306
                     },
                     "ignore": false,
+                    "ignore_vendor_events": true,
                     "simple_modifications": [
                         {
                             "from": { "key_code": "escape" },
@@ -108,6 +109,15 @@
                         "vendor_id": 1133
                     },
                     "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 45111,
+                        "vendor_id": 1133
+                    },
+                    "ignore": false,
+                    "mouse_flip_vertical_wheel": true
                 }
             ],
             "name": "Default profile",

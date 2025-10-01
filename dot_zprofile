@@ -39,3 +39,5 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 . "$HOME/.local/bin/env"
 # Solana cli
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+export PATH="$PATH:/Users/indirection42/.foundry/bin"
