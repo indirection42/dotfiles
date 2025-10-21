@@ -1,11 +1,19 @@
 # Homebrew settings
-export HOMEBREW_PREFIX="/opt/homebrew"; 
-export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
-export HOMEBREW_REPOSITORY="/opt/homebrew";
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}";
 export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:";
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 #export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Use homebrew LLVM
+LLVM_PATH=$(brew --prefix llvm)
+export PATH="$LLVM_PATH/bin:$PATH"
+export LIBCLANG_PATH="$LLVM_PATH/lib"
+export LDFLAGS="-L$LLVM_PATH/lib"
+export CPPFLAGS="-I$LLVM_PATH/include"
+#export DYLD_LIBRARY_PATH="$LLVM_PATH/lib"
+# fallback path is searched at last, which is safer
+# which is also the cargo book recommends
+export DYLD_FALLBACK_LIBRARY_PATH="$LLVM_PATH/lib"
 
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
