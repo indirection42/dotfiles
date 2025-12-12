@@ -18,27 +18,28 @@ export DYLD_FALLBACK_LIBRARY_PATH="$LLVM_PATH/lib"
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
+# Vim 
 VI_MODE_SET_CURSOR=true
 #alias vim="nvim"
 #export VIMCONFIG=~/.config/nvim
 #export VIMDATA=~/.local/share/nvim
 export EDITOR=vim
 
-# Haskell settings
+# Haskell 
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-# Rust settings
+# Rust
 . "$HOME/.cargo/env" # cargo-env
 
-# fnm
+# Fast node manager
 eval "$(fnm env)"
 
-# bun
+# Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
-[ -s "/Users/indirection42/.bun/_bun" ] && source "/Users/indirection42/.bun/_bun"
+[ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
 # Python managed by uv
 . "$HOME/.local/bin/env"
@@ -47,4 +48,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 # Foundry
-export PATH="/Users/indirection42/.foundry/bin:$PATH"
+export PATH="$HOME/.foundry/bin:$PATH"
