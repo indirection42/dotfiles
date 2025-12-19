@@ -16,16 +16,16 @@
 
 # Conditional includes based on directory structure
 # Personal projects (assumes they're in ~/personal/ or ~/dev/personal/)
-[includeIf "gitdir:~/personal/"]
-    path = ~/.gitconfig-personal
-[includeIf "gitdir:~/dev/personal/"]
-    path = ~/.gitconfig-personal
+; [includeIf "gitdir:~/personal/"]
+;     path = ~/.gitconfig-personal
+; [includeIf "gitdir:~/dev/personal/"]
+;     path = ~/.gitconfig-personal
 
 # Professional projects (assumes they're in ~/work/ or ~/dev/work/)
-[includeIf "gitdir:~/work/"]
-    path = ~/.gitconfig-work
-[includeIf "gitdir:~/dev/work/"]
-    path = ~/.gitconfig-work
+; [includeIf "gitdir:~/work/"]
+;     path = ~/.gitconfig-work
+; [includeIf "gitdir:~/dev/work/"]
+;     path = ~/.gitconfig-work
 
 # Default configuration (fallback)
 [user]

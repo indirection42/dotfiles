@@ -1,24 +1,22 @@
-[".oh-my-zsh"]
+[".zsh/plugins/zsh-autosuggestions"]
     type = "git-repo"
-    url = "https://github.com/ohmyzsh/ohmyzsh.git"
+    url = "https://github.com/zsh-users/zsh-autosuggestions.git"
     refreshPeriod = "168h"
     pull.args = ["--ff-only"]
-    clone.args = ["--depth=1"]
-[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+    clone.args = ["--depth=1","--single-branch"]
+[".zsh/plugins/zsh-syntax-highlighting"]
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     refreshPeriod = "168h"
     pull.args = ["--ff-only"]
-    clone.args = ["--depth=1"]
-[".oh-my-zsh/custom/themes/powerlevel10k"]
-    type = "git-repo"
-    url = "https://github.com/romkatv/powerlevel10k.git"
-    refreshPeriod = "168h"
-    pull.args = ["--ff-only"]
-    clone.args = ["--depth=1"]
+    clone.args = ["--depth=1","--single-branch"]
 [".vim/pack/alker0/chezmoi.vim"]
     type = "git-repo"
     url = "https://github.com/alker0/chezmoi.vim.git"
     refreshPeriod = "168h"
     pull.args = ["--ff-only"]
-    clone.args = ["--depth=1"]
+    clone.args = ["--depth=1","--single-branch"]
+[".vim/autoload/plug.vim"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    refreshPeriod = "168h"
