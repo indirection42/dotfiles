@@ -1,11 +1,14 @@
 #! /bin/sh
 {{ if eq .chezmoi.os "linux" -}}
 sudo apt install age
+sudo apt install zsh
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 {{ else if eq .chezmoi.os "darwin" -}}
 brew install age
 brew install zoxide
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 {{ end -}}
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://install.ohmyz.sh/)" "" --unattended
 # Install starship
 curl -sS https://starship.rs/install.sh | sh
