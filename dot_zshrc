@@ -153,4 +153,4 @@ fi
 [ -d "$HOME/.foundry/bin" ] && export PATH="$HOME/.foundry/bin:$PATH"
 
 # Added by Antigravity
-[ -d "/Users/indirection42/.antigravity/antigravity/bin" ] && export PATH="/Users/indirection42/.antigravity/antigravity/bin:$PATH"
+[ -d "$HOME/.antigravity/antigravity/bin" ] && export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
