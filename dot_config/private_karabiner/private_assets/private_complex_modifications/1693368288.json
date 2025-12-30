@@ -1,1 +1,0 @@
-{"title":"Ctrl + [ to Esc","rules":[{"description":"Change Ctrl + [ to Esc","manipulators":[{"type":"basic","from":{"key_code":"open_bracket","modifiers":{"mandatory":["left_control"],"optional":["caps_lock"]}},"to":[{"key_code":"escape"}]}]}]}
